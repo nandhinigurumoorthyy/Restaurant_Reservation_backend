@@ -191,12 +191,12 @@ app.delete("/api/bookings/:id", async (req, res) => {
 // edit the booking
 app.put("/api/bookings/:id", async (req, res) => {
   const bookingId = req.params.id;
-  const updatedData = req.body;
+  const { partySize, date, partyTime } = req.body; // Only update specific fields
 
   try {
     const result = await reservations.findByIdAndUpdate(
       bookingId,
-      updatedData,
+      { partySize, date, partyTime },
       { new: true } // Return the updated document
     );
 
