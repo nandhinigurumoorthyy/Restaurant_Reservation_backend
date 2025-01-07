@@ -1,0 +1,470 @@
+[
+  {
+    "id": 1,
+    "name": "The Gourmet Kitchen",
+    "title_card_img": "https://d2lswn7b0fl4u2.cloudfront.net/photos/pg-italian-dishes-1645372086.jpg",
+    "cuisine": "Italian",
+    "description": "Classic Italian dishes served with love and tradition.",
+    "location": "Chennai",
+    "priceRange": "₹2000 - ₹7000",
+    "rating": 4.5,
+    "features": ["Outdoor Seating", "Live Music", "Casual Dining","Private Rooms"],
+    "ambiance": ["Romantic", "Casual", "Family"],
+    "dietaryRestrictions": ["Gluten-Free"],
+    "menus": [
+      { "dish": "Margherita Pizza", "price": 2000 },
+      { "dish": "Pasta Alfredo", "price": 3600 },
+      { "dish": "Tiramisu", "price": 2000 },
+      { "dish": "Bruschetta", "price": 3250 },
+      { "dish": "Risotto", "price": 4300 },
+      { "dish": "Pizza", "price": 5050 }
+    ],
+    "photos": [
+      "https://www.tourissimo.travel/hs-fs/hubfs/Blog_pictures/Hotels/Italy%20Hotels%20Blog%205.jpg?width=2240&height=1260&name=Italy%20Hotels%20Blog%205.jpg",
+      "https://res.cloudinary.com/simplotel/image/upload/x_0,y_115,w_1730,h_974,r_0,c_crop,q_80,fl_progressive/w_900,f_auto,c_fit/the-promenade-pondicherry/bay_kqkt6l?1735689600085",
+      "https://b.zmtcdn.com/data/pictures/7/3700387/8116d5de33d00eff37079a56c856c423_featured_v2.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-5MInhY0One7gh3sFwqOGnen_Syzipxo7kQ&s"
+    ],
+    "link": "http://www.gourmetkitchen.com",
+    "hoursOfOperation": {
+      "Monday-Friday": "10:00 AM - 10:00 PM",
+      "Saturday-Sunday": "9:00 AM - 11:00 PM"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Spice Symphony",
+    "title_card_img": "https://www.holidify.com/images/cmsuploads/compressed/shutterstock_649541308_20191010160155.png",
+    "cuisine": "Indian",
+    "description": "A harmonious blend of India's bold and vibrant spices.",
+    "location": "Mumbai",
+    "priceRange": "₹2000 - ₹7000",
+    "rating": 4.2,
+    "features": ["Live Music","Casual Dining", "Private Rooms"],
+    "ambiance": ["Family", "Romantic", "Casual"],
+    "dietaryRestrictions": ["Gluten-Free"],
+    "menus": [
+      { "dish": "Butter Chicken", "price": 2400 },
+      { "dish": "Paneer Tikka", "price": 4550 },
+      { "dish": "Dal Makhani", "price": 5000 },
+      { "dish": "Garlic Naan", "price": 6500 },
+      { "dish": "Briyani", "price": 7000 },
+      { "dish": "Mutton Soup", "price": 3456 }
+    ],
+    "photos": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNUzm0P_gNwBAOb7_CBVIMzYraQZcZwxYL9g&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ0riKWyzhf5X2tvQQG2i43a6IAsRjZ48IQw&s",
+      "https://as1.ftcdn.net/v2/jpg/03/28/44/04/1000_F_328440467_NMHo13pUctXR4AarxcxK8R0DrJqNeuCs.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbcTNcFlZBksCo8_AKyiUTvJuF0ClLDmUihg&s"
+    ],
+    "link": "http://www.spicesymphony.com",
+    "hoursOfOperation": {
+      "Monday-Friday": "12:00 PM - 10:30 PM",
+      "Saturday-Sunday": "11:00 AM - 11:30 PM"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Green Leaf Cafe",
+    "title_card_img": "https://dineout-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto/DINEOUT_ALL_RESTAURANTS/IMAGES/RESTAURANT_IMAGE_SERVICE/2024/10/18/e80496d2-e2fc-4540-ac09-3de7e402a9df_image5fe4d6d31e0bc400bbc026f625cd9c9d1.JPG",
+    "cuisine": "Vegan",
+    "description": "Plant-based dishes with a fresh, eco-friendly twist.",
+    "location": "Bangalore",
+    "priceRange": "₹7000 - ₹12000",
+    "rating": 4.3,
+    "features": ["Live Music","Outdoor Seating", "Organic Menu","Group Dining"],
+    "ambiance": ["Family", "Casual"],
+    "dietaryRestrictions": ["Vegan", "Vegetarian"],
+    "menus": [
+      { "dish": "Vegan Burger", "price": 7050 },
+      { "dish": "Kale Smoothie", "price": 7300 },
+      { "dish": "Avocado Toast", "price": 8400 },
+      { "dish": "Vegan Brownie", "price": 9250 },
+      { "dish": "Mushroom Steaks", "price": 10380 },
+      { "dish": "Pasta Sauce", "price": 11000 }
+    ],
+    "photos": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQU2l0_TWg4YzbE7gqbKH6ILqDkYwjI3IRCtw&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrbqaTtdK65ONoK1xyxj3u7RaEmMWFZKuGfQ&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgpnyyl0-_pl1y78v5CVropNf6PZ6Zz5_CgrGtSfQVhaR6XgqkbTUb9K6b7h7Cnp9cOJg&usqp=CAU",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSABl8PO0RhYsjooM_4QdeA95y_SQdEpEsrrg&s"
+    ],
+    "link": "http://www.greenleafcafe.com",
+    "hoursOfOperation": {
+      "Monday-Sunday": "8:00 AM - 8:00 PM"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Dindugal Briyani",
+    "title_card_img": "https://t4.ftcdn.net/jpg/05/80/78/15/360_F_580781596_uVgdX3avt2KHJQxWr4gd9Xli4VFkcfb5.jpg",
+    "cuisine": "Indian",
+    "description": "Traditional Indian flavors with a modern touch.",
+    "location": "Chennai",
+    "priceRange": "₹12000 - ₹17000",
+    "rating": 4.0,
+    "features": ["Casual Dining", "Outdoor Seating", "Live Music","Group Dining"],
+    "ambiance": ["Family", "Casual"],
+    "dietaryRestrictions": ["Gluten-Free"],
+    "menus": [
+      { "dish": "Mutton Briyani", "price": 13500 },
+      { "dish": "Chicken Biryani", "price": 14000 },
+      { "dish": "Butter chicken", "price": 13600 },
+      { "dish": "Chicken coriander thokku", "price": 15700 },
+      { "dish": "Spicy egg curry", "price": 16000 },
+      { "dish": "Fish makhani", "price": 16800 }
+    ],
+    "photos": [
+      "https://d4t7t8y8xqo0t.cloudfront.net/resized/750X436/eazytrendz%2F1093%2Ftrend20160528100555.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgBgSZlt7lYYJGwJ6XuBJvPpv-ZZYJyc1W2g&s",
+      "https://b.zmtcdn.com/data/pictures/5/19216105/5ada3d7d13dc368e52683df8f41f55c6.jpg?fit=around|960:500&crop=960:500;*,*",
+      "https://cdn.venuelook.com/uploads/space_13929/1517826237_204x158.png"
+    ],
+    "link": "http://www.dindugalbriyani.com",
+    "hoursOfOperation": {
+      "Monday-Sunday": "10:30 AM - 9:30 PM"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Ocean Eats",
+    "title_card_img": "https://img.freepik.com/premium-photo/aerial-view-photograph-4-people-eating-plate-grilled-prawns-restaurant-table-minimalist-we_343960-117093.jpg",
+    "cuisine": "Seafood",
+    "description": "Rustic seafood dining featuring crabs, lobsters, and more.",
+    "location": "Mumbai",
+    "priceRange": "₹7000 - ₹12000",
+    "rating": 4.6,
+    "features": ["Casual Dining", "Outdoor Seating", "Live Music","Private Rooms"],
+    "ambiance": ["Family", "Romantic", "Casual"],
+    "dietaryRestrictions": ["Gluten-Free"],
+    "menus": [
+      { "dish": "Crispy Fish-and-Chips", "price": 7800 },
+      { "dish": "Fish Finger", "price": 8900 },
+      { "dish": "Crab Lollipop", "price": 9600 },
+      { "dish": "Lobster roll", "price": 10500 },
+      { "dish": "Lobster Thermidor", "price": 11000 },
+      { "dish": "Prawn soup", "price": 9000 }
+    ],
+    "photos": [
+      "https://images.immediate.co.uk/production/volatile/sites/2/2023/08/230831GARLICPRAWNS03174-23d938c.jpg?quality=90&resize=700,466",
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2c/fd/ce/ce/caption.jpg?w=600&h=400&s=1",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaJeelHBLhM1y9Vc6rO5mYYnTo3jukJGGxbF0qttCu0MZ80ByXfJwf3Xb7a7YeLg6yxZY&usqp=CAU",
+      "https://seminyak.hotelindigo.com/wp-content/uploads/2024/08/seminyak-seafood-platter.jpg"
+    ],
+    "link": "http://www.oceaneats.com",
+    "hoursOfOperation": {
+      "Monday-Friday": "6:00 PM - 11:00 PM",
+      "Saturday-Sunday": "12:00 PM - 11:00 PM"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Vegan Palace",
+    "title_card_img": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/38/7f/70/seafood-corner.jpg",
+    "cuisine": "Vegan",
+    "description": "Wholesome vegan meals crafted for health and taste.",
+    "location": "Hyderabad",
+    "priceRange": "₹2000 - ₹7000",
+    "rating": 4.3,
+    "features": [ "Organic Menu", "Casual Dining","Live Music","Outdoor Seating"],
+    "ambiance": ["Casual", "Romantic"],
+    "dietaryRestrictions": ["Vegan", "Vegetarian"],
+    "menus": [
+      { "dish": "Vegan Burger", "price": 2000 },
+      { "dish": "Kale Smoothie", "price": 2300 },
+      { "dish": "Avocado Toast", "price": 4400 },
+      { "dish": "Vegan Brownie", "price": 5510 },
+      { "dish": "Spinach ravioli", "price": 6550 },
+      { "dish": "Crumpets", "price": 4500 }
+    ],
+    "photos": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5cwRE4h3vfxnZPndGuyhmrWpgi_lk1w7KNg&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc9AIvAc6dkD5GTVhVASi91F4Jc4n7AbOFhw&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD93kSnpSqOZ84BgwSRsffC6mfEQ8ams_1yg&s",
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2b/16/16/e4/dive-into-the-captivating.jpg?w=600&h=-1&s=1"
+    ],
+    "link": "http://www.veganpalace.com",
+    "hoursOfOperation": {
+      "Monday-Sunday": "8:00 AM - 8:00 PM"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Flame and Grill",
+    "title_card_img": "https://t3.ftcdn.net/jpg/06/05/78/76/360_F_605787633_yWU3UoS6EmVJa7gkmhkuTfXxZGcnxdhc.jpg",
+    "cuisine": "BBQ",
+    "description": "Char-grilled barbecue with a rustic touch.",
+    "location": "Bangalore",
+    "priceRange": "₹12000 - ₹17000",
+    "rating": 4.7,
+    "features": ["Group Dining", "Live Music","Casual Dining"],
+    "ambiance": ["Casual", "Romantic", "Family"],
+    "dietaryRestrictions": ["Gluten-Free"],
+    "menus": [
+      { "dish": "Grilled Chicken", "price": 12800 },
+      { "dish": "Barbecue Ribs", "price": 13900 },
+      { "dish": "Corn on the Cob", "price": 14000 },
+      { "dish": "Potato Wedges", "price": 14550 },
+      { "dish": "Chicken souvlaki", "price": 15550 },
+      { "dish": "Citrus BBQ Chicken", "price": 16550 }
+    ],
+    "photos": [
+      "https://insanelygoodrecipes.com/wp-content/uploads/2021/05/Grilled-BBQ-Skewers-with-Pineapples-and-Lemons.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1hgzA6BSiZRZ7JRZhLfahP3lOC4xe-t5aww&s",
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/53/4e/eb/r-g-poolside-barbeque.jpg?w=600&h=-1&s=1",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0CEQcxGSbY2b4hnafkYVNrX8t_muRnuhW-a6nDdndAJYhHSqwkLeF0k4PgoPJlvwR6R4&usqp=CAU"
+    ],
+    "link": "http://www.flameandgrill.com",
+    "hoursOfOperation": {
+      "Monday-Sunday": "12:00 PM - 10:00 PM"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Seafood Paradise",
+    "title_card_img": "https://d4t7t8y8xqo0t.cloudfront.net/app/resized/818X450/restaurant/673844/restaurant020220215074950.jpeg",
+    "cuisine": "Seafood",
+    "description": "Where seafood meets waterfront dining at its best.",
+    "location": "Kolkata",
+    "priceRange": "₹12000 - ₹17000",
+    "rating": 4.4,
+    "features": ["Outdoor Seating", "Live Music", "Casual Dining"],
+    "ambiance": ["Casual", "Romantic"],
+    "dietaryRestrictions": ["Gluten-Free"],
+    "menus": [
+      { "dish": "Grilled Lobster", "price": 12200 },
+      { "dish": "Crab Curry", "price": 15800 },
+      { "dish": "Fish Tacos", "price": 16200 },
+      { "dish": "Prawn Tempura", "price": 17000 },
+      { "dish": "Garlic Prawns", "price": 14800 },
+      { "dish": "Black pepper crab", "price": 13900 }
+    ],
+    "photos": [
+      "https://assets.rbl.ms/21534920/origin.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoPuCzeG2RA47gOMHVJOsiZ_G6KpYfHHDRjg&s",
+      "https://b.zmtcdn.com/data/pictures/6/21350256/77381b9270c3677d4008a5bb93b3267d_featured_v2.jpg",
+      "https://b.zmtcdn.com/data/pictures/2/68702/0b0d542e304889829909ec759c9833b1_featured_v2.jpg"
+    ],
+    "link": "http://www.seafoodparadise.com",
+    "hoursOfOperation": {
+      "Monday-Sunday": "11:30 AM - 9:30 PM"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Pizza Bliss",
+    "title_card_img": "https://vmnk.gumlet.io/assets/bangalore/monkey-bar-indira-nagar/images/original/monkey-bar-indira-nagar-3iape.jpg",
+    "cuisine": "Italian",
+    "description": "Hand-tossed pizzas with an authentic Italian flair.",
+    "location": "Chennai",
+    "priceRange": "₹7000 - ₹12000",
+    "rating": 4.1,
+    "features": ["Outdoor Seating","Casual Dining","Group Dining", "Private Rooms"],
+    "ambiance": ["Family", "Romantic", "Casual"],
+    "dietaryRestrictions": ["Vegan", "Vegetarian"],
+    "menus": [
+      { "dish": "Pizza Margherita", "price": 10400 },
+      { "dish": "Pizza Napoletana", "price": 11400 },
+      { "dish": "Classic Cheeseburger", "price": 7400 },
+      { "dish": "BBQ Bacon Burger", "price": 8500 },
+      { "dish": "Fries with Cheese", "price": 9250 },
+      { "dish": "Milkshake", "price": 9300 }
+    ],
+    "photos": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvG9dRvJfR6l8T54Lv4vbU_ZbkmaWfh56h0w&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB_XSV5ouZJ4xYFkvWiZRRiQCFNpyKuvS6Bw&s",
+      "https://b.zmtcdn.com/data/pictures/5/73145/2d58ba7b63ce565de521aec7e1e710c7_featured_v2.jpg",
+      "https://images.squarespace-cdn.com/content/v1/5d747f0a2af80178f629c552/1665939599230-21Z4ZM00R268O30CC66B/DSCF3934-HDR.jpg?format=1500w"
+    ],
+    "link": "http://www.pizzabliss.com",
+    "hoursOfOperation": {
+      "Monday-Sunday": "10:00 AM - 11:00 PM"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Curry Kingdom",
+    "title_card_img": "https://salum.ph/wp-content/uploads/2024/01/tipon.jpg",
+    "cuisine": "Indian",
+    "description": "Journey through India's diverse regional flavors.",
+    "location": "Mumbai",
+    "priceRange": "₹2000 - ₹7000",
+    "rating": 4.2,
+    "features": ["Live Music", "Private Rooms", "Group Dining"],
+    "ambiance": ["Casual", "Family"],
+    "dietaryRestrictions": ["Gluten-Free"],
+    "menus": [
+      { "dish": "Chicken Biryani", "price": 3500 },
+      { "dish": "Rogan Josh", "price": 2700 },
+      { "dish": "Paneer Butter Masala", "price": 3600 },
+      { "dish": "Tandoori Roti", "price": 5550 },
+      { "dish": "Tandoori Dosa", "price": 4500 },
+      { "dish": "Mutton Gravy", "price": 6450 }
+    ],
+    "photos": [
+      "https://etimg.etb2bimg.com/photo/87405876.cms",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDO36PLIeGPBFltpTztxii0SdsVIJtDv8NIA&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSq0-YbZVof3fLyhicuSQFi4DVCyw2mCq9U_w&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8rNA9haAaaaZUIxiMQWSAgeyynAIGaMi0YVDqy1qFF6ea0HtNY_uc9-mUn-saxQN18Nw&usqp=CAU"
+    ],
+    "link": "http://www.currykingdom.com",
+    "hoursOfOperation": {
+      "Monday-Sunday": "12:00 PM - 11:00 PM"
+    }
+  },
+  {
+    "id": 11,
+    "name": "BBQ Bites",
+    "title_card_img": "https://img.freepik.com/premium-photo/closeup-view-grill-with-mouthwatering-food-sizzling-grilling-perfection-sizzle-steam-korean-bbq-grill-ai-generated_538213-33238.jpg",
+    "cuisine": "BBQ",
+    "description": "Juicy BBQ dishes with a variety of tangy sauces.",
+    "location": "Bangalore",
+    "priceRange": "₹12000 - ₹17000",
+    "rating": 4.5,
+    "features": ["Casual Dining", "Live Music", "Outdoor Seating"],
+    "ambiance": ["Casual", "Family"],
+    "dietaryRestrictions": ["Gluten-Free"],
+    "menus": [
+      { "dish": "Grilled Salmon", "price": 15500 },
+      { "dish": "Caesar Salad", "price": 12800 },
+      { "dish": "Roast Chicken", "price": 13400 },
+      { "dish": "Beef brisket", "price": 12600 },
+      { "dish": "Tandoori Roll", "price": 13600 },
+      { "dish": "Chicken Shawarma", "price": 14600 }
+    ],
+    "photos": [
+      "https://hips.hearstapps.com/hmg-prod/images/roast-chicken-recipe-2-66b231ac9a8fb.jpg?crop=0.8888888888888888xw:1xh;center,top&resize=1200:*",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPnm-91p-oqwNwrCyx703CBav9tZ6423sWIA&s",
+      "https://d4t7t8y8xqo0t.cloudfront.net/app//resized/818X450/restaurant/685093/restaurant120221013093159.jpg",
+      "https://d4t7t8y8xqo0t.cloudfront.net/app//resized/818X450/restaurant/118827/restaurant420210109051555.jpg"
+    ],
+    "link": "http://www.bbqbites.com",
+    "hoursOfOperation": {
+      "Monday-Sunday": "1:00 PM - 12:00 AM"
+    }
+  },
+  {
+    "id": 12,
+    "name": "Veg Delight",
+    "title_card_img": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/24/23/30/21/hyatt-zilara-riviera.jpg?w=1200&h=-1&s=1",
+    "cuisine": "Vegan",
+    "description": "A paradise for vegans who love vibrant, hearty meals.",
+    "location": "Hyderabad",
+    "priceRange": "₹2000 - ₹7000",
+    "rating": 4.3,
+    "features": ["Group Dining", "Organic Menu","Live Music","Private Rooms"],
+    "ambiance": ["Casual", "Romantic"],
+    "dietaryRestrictions": ["Vegan", "Vegetarian"],
+    "menus": [
+      { "dish": "Lentil Bolognese", "price": 2200 },
+      { "dish": "Butternut Squash Risotto", "price": 3800 },
+      { "dish": "Whole Roasted Cauliflower", "price": 4500 },
+      { "dish": "Cabbage Stir Fry", "price": 5000 },
+      { "dish": "Crispy Sesame Tempeh Bowl", "price": 6500 },
+      { "dish": "Vegan Pie", "price": 5500 }
+    ],
+    "photos": [
+      "https://www.feastingathome.com/wp-content/uploads/2020/10/Instant-Pot-Butternut-Risotto_-15-1024x1536.jpg",
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/27/fe/03/f8/ministry-of-chutneys.jpg?w=600&h=-1&s=1",
+      "https://www.feastingathome.com/wp-content/uploads/2023/01/Cabbage-Stir-Fry-7-1024x1536.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe3gB-65wX3bwtpVXDCbpBDpH4lG1gxH46M3lCULuHrju9UtPH8IERh-ql9KbWkxqtS2s&usqp=CAU"
+    ],
+    "link": "http://www.vegdelight.com",
+    "hoursOfOperation": {
+      "Monday-Sunday": "12:00 PM - 11:00 PM"
+    }
+  },
+  {
+    "id": 13,
+    "name": "Pizza Haven",
+    "title_card_img": "https://urbanhermitage.in/wp-content/uploads/2015/12/DSC_0773-2.jpg",
+    "cuisine": "Italian",
+    "description": "Indulge in the rich and vibrant tastes of Italy.",
+    "location": "Kolkata",
+    "priceRange": "₹7000 - ₹12000",
+    "rating": 4.0,
+    "features": ["Outdoor Seating", "Live Music", "Casual Dining","Private Rooms","Organic Menu"],
+    "ambiance": ["Casual", "Romantic", "Family"],
+    "dietaryRestrictions": ["Vegan", "Vegetarian"],
+    "menus": [
+      { "dish": "Pepperoni Pizza", "price": 7900 },
+      { "dish": "Pizza Marinara", "price": 8900 },
+      { "dish": "Pizza Capricciosa", "price": 9000 },
+      { "dish": "Veggie Supreme Pizza", "price": 10750 },
+      { "dish": "Garlic Breadsticks", "price": 11400 },
+      { "dish": "Tiramisu", "price": 11500 }
+    ],
+    "photos": [
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/02/68/21/08/tuscana-pizzeria-interior.jpg?w=600&h=-1&s=1",
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/03/f5/ac/2b/muse-the-art-gourmet.jpg?w=600&h=-1&s=1",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtdiwhUvvp4_nPgx-hTux1K7cqorWWrW3lEA&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQk5MSOhbJXx5iO_igLopGMPl22CkoyPonng7SNEOn08T8aer6WYPYZDh4lfHGWkNV3wCE&usqp=CAU"
+    ],
+    "link": "http://www.pizzahaven.com",
+    "hoursOfOperation": {
+      "Monday-Sunday": "11:30 AM - 10:00 PM"
+    }
+  },
+  {
+    "id": 14,
+    "name": "Indian House",
+    "title_card_img": "https://static.wixstatic.com/media/0f644c_13d6530c37c64dc7951d4dd918dbb54c~mv2_d_6720_4480_s_4_2.jpg/v1/crop/x_0,y_80,w_5390,h_4400/fill/w_539,h_440,al_c,q_80,usm_0.66_1.00_0.01/0f644c_13d6530c37c64dc7951d4dd918dbb54c~mv2_d_6720_4480_s_4_2.jpg",
+    "cuisine": "Indian",
+    "description": "A royal experience with India’s rich culinary heritage.",
+    "location": "Chennai",
+    "priceRange": "₹7000 - ₹12000",
+    "rating": 4.7,
+    "features": ["Casual Dining", "Live Music","Private Rooms"],
+    "ambiance": ["Family", "Romantic", "Casual"],
+    "dietaryRestrictions": ["Gluten-Free"],
+    "menus": [
+      { "dish": "Tikka Masala chicken", "price": 9000 },
+      { "dish": "Egg Salad", "price": 10800 },
+      { "dish": "Mashed Potatoes", "price": 10500 },
+      { "dish": "Thali traditional Indian dish", "price": 11700 },
+      { "dish": "Seafood Meals", "price": 8700 },
+      { "dish": "Chole Bhature", "price": 7700 }
+    ],
+    "photos": [
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxa7JfqO3EaPKyw7DOlOFIADBQ8Y-FP7MfLw&s",
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/81/73/8e/private-dining-room.jpg?w=600&h=400&s=1",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWlm2dcY1GCjbZdd6Zkds3utdW9LhtX3GIdXUwoxQxuNe8dOwF8w-TL9Fs3dKh7Z6uWfM&usqp=CAU",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7ApwmMsNNj___nUhu2uJXG9PEb8Bl38KBv6MghQykJoCMvwyXDgXIl1A0H5ud2X6UfWY&usqp=CAU"
+    ],
+    "link": "http://www.indianhouse.com",
+    "hoursOfOperation": {
+      "Monday-Sunday": "5:00 PM - 11:00 PM"
+    }
+  },
+  {
+    "id": 15,
+    "name": "Ocean Waves",
+    "title_card_img": "https://b.zmtcdn.com/data/collections/a7bf69f0d955766f9fe5ac026c2eaec0_1709815455.jpg",
+    "cuisine": "Seafood",
+    "description": "A gourmet seafood experience with a modern twist.",
+    "location": "Hyderabad",
+    "priceRange": "₹12000 - ₹17000",
+    "rating": 4.9,
+    "features": [ "Outdoor Seating", "Live Music", "Casual Dining"],
+    "ambiance": ["Casual"],
+    "dietaryRestrictions": ["Gluten-Free"],
+    "menus": [
+      { "dish": "Lobster Mac and Cheese", "price": 12200 },
+      { "dish": "Seafood meal", "price": 16500 },
+      { "dish": "Lobster rolls", "price": 13450 },
+      { "dish": "Prawn Curry", "price": 14250 },
+      { "dish": "Crab Curry", "price": 15250 },
+      { "dish": "Crab in Padang sauce", "price": 12650 }
+    ],
+    "photos": [
+      "https://getfish.com.au/cdn/shop/articles/Step_3_-_mud_crab.png?v=1716445401",
+      "https://res.cloudinary.com/purnesh/image/upload/f_auto/v1612166298/lacabana1.jpg",
+      "https://res.cloudinary.com/purnesh/image/upload/f_auto/v1612166299/qbar.jpg",
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/c5/91/99/img-20181202-122531-largejpg.jpg?w=600&h=400&s=1"
+    ],
+    "link": "http://www.oceanwaves.com",
+    "hoursOfOperation": {
+      "Monday-Sunday": "8:00 AM - 8:00 PM"
+    }
+  }
+]
