@@ -11,7 +11,8 @@ const ReserveModel = require("./model/reserve.model");
 const restaurantData = JSON.parse(
   fs.readFileSync("./Restaurant.json", "utf-8")
 );
-
+const reservations = require("./model/reserve.model"); // Adjust path as needed
+const { ObjectId } = require("mongodb");
 const app = express();
 
 // Middleware
@@ -19,12 +20,34 @@ app.use(express.json());
 app.use(
   cors({
     origin: ["http://localhost:5173", "http://0.0.0.0:10000"],
-    methods: ["POST", "GET"],
+    methods: ["POST", "GET", "DELETE", "PUT"],
     credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 
 app.use(cookieParser());
+
+// Middleware to verify JWT token
+const verifyJwt = (req, res, next) => {
+  const token = req.cookies.token; // JWT token is stored in cookies
+
+  if (!token) {
+    return res.status(401).json({ message: "Authentication required" });
+  }
+
+  try {
+    // Verify the token using the secret key
+    const decoded = jwt.verify(
+      token,
+      process.env.JWT_SECRET_KEY || "default_secret_key"
+    );
+    req.user = decoded; // Add decoded user data to request object
+    next();
+  } catch (error) {
+    return res.status(403).json({ message: "Invalid or expired token" });
+  }
+};
 
 // API Route for creating a user
 app.post("/create", async (req, res) => {
@@ -58,11 +81,14 @@ app.post("/login", async (req, res) => {
 
     const token = jwt.sign(
       { email: user.email, username: user.username },
-      `${process.env.JWT_SECRET_KEY}` || "default_secret_key",
+      process.env.JWT_SECRET_KEY || "default_secret_key",
       { expiresIn: "1d" }
     );
 
-    res.cookie("token", token, { httpOnly: true });
+    res.cookie("token", token, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+    }); // Set JWT in cookie
     res.json({
       status: "Success",
       user: { email: user.email, username: user.username },
@@ -73,36 +99,23 @@ app.post("/login", async (req, res) => {
   }
 });
 
-// reserve page
+// Reserve a table at a restaurant
 app.post("/restaurants/:restaurantId/reservepage", async (req, res) => {
+  const { date, partySize, partyTime, contact, email, username, restaurantId } =
+    req.body;
+
+  if (!date || !partySize || !partyTime || !contact) {
+    return res.status(400).json({ message: "All fields are required" });
+  }
+
   try {
-    const {
-      date, // Changed from fromDate, toDate to a single date field
-      partySize,
-      partyTime,
-      contact,
-      email,
-      username,
-      restaurantId,
-    } = req.body;
-
-    // Validate input fields
-    if (
-      !date ||
-      !partySize ||
-      !partyTime ||
-      !contact 
-    ) {
-      return res.status(400).json({ message: "All fields are required" });
-    }
-
-    // Find the user based on email (assuming email exists in User model)
+    // Find user by email
     const user = await UserModel.findOne({ email });
     if (!user) {
       return res.status(404).json({ message: "User not found" });
     }
 
-    // Find the restaurant by matching restaurantId from the restaurant.json file
+    // Find restaurant by restaurantId
     const restaurant = restaurantData.find(
       (rst) => rst.id === parseInt(restaurantId, 10)
     );
@@ -110,9 +123,9 @@ app.post("/restaurants/:restaurantId/reservepage", async (req, res) => {
       return res.status(404).json({ message: "Restaurant not found" });
     }
 
-    // Create a new reservation
+    // Create and save reservation
     const reservation = new ReserveModel({
-      date, // Only one date field
+      date,
       partySize,
       partyTime,
       contact,
@@ -124,10 +137,7 @@ app.post("/restaurants/:restaurantId/reservepage", async (req, res) => {
       restaurantLocation: restaurant.location,
     });
 
-    // Save the reservation to the database
     await reservation.save();
-
-    // Send success response
     res.status(201).json({
       message: "Reservation created successfully",
       reservation,
@@ -138,8 +148,70 @@ app.post("/restaurants/:restaurantId/reservepage", async (req, res) => {
   }
 });
 
+// get bookings
+app.get("/api/bookings", (req, res) => {
+  const { email } = req.query; // Get email from query parameters
+  if (!email) {
+    return res.status(400).json({ message: "Email is required" });
+  }
+
+  // Query the database to fetch bookings for the provided email
+  reservations
+    .find({ email })
+    .then((reservations) => {
+      res.json(reservations); // Send the reservations as a JSON response
+    })
+    .catch((err) => {
+      console.error("Error fetching bookings:", err);
+      res.status(500).json({ message: "Error fetching bookings", error: err });
+    });
+});
+
+// delete booking
+// Ensure you import ObjectId if necessary
+
+app.delete("/api/bookings/:id", async (req, res) => {
+  const bookingId = req.params.id;
+
+  try {
+    // Use findByIdAndDelete to delete the document directly by ID
+    const result = await reservations.findByIdAndDelete(bookingId);
+
+    if (result) {
+      res.status(200).json({ message: "Booking deleted successfully!" });
+    } else {
+      res.status(404).json({ message: "Booking not found!" });
+    }
+  } catch (error) {
+    console.error("Error deleting booking:", error);
+    res.status(500).json({ message: "Error deleting booking", error });
+  }
+});
+
+// edit the booking
+app.put("/api/bookings/:id", async (req, res) => {
+  const bookingId = req.params.id;
+  const updatedData = req.body;
+
+  try {
+    const result = await reservations.findByIdAndUpdate(
+      bookingId,
+      updatedData,
+      { new: true } // Return the updated document
+    );
+
+    if (result) {
+      res.status(200).json(result);
+    } else {
+      res.status(404).json({ message: "Booking not found!" });
+    }
+  } catch (error) {
+    console.error("Error updating booking:", error);
+    res.status(500).json({ message: "Error updating booking", error });
+  }
+});
 
 // Starting the server
-app.listen(`${process.env.PORT}`, `${process.env.HOSTNAME}`, function () {
+app.listen(process.env.PORT, process.env.HOSTNAME, function () {
   createDbConnection();
 });
