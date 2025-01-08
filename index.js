@@ -15,6 +15,7 @@ const reservations = require("./model/reserve.model"); // Adjust path as needed
 const { ObjectId } = require("mongodb");
 const ReviewModel = require("./model/review.model");
 const app = express();
+const paymentRoutes = require("./routes/payment");
 
 // Middleware
 app.use(express.json());
@@ -337,6 +338,34 @@ app.delete("/api/reviews/:reviewId", async (req, res) => {
     res.status(500).json({ message: "Internal server error." });
   }
 });
+
+// GET API to fetch reviews by restaurant name
+app.get("/apirst/reviews/:restaurantName", async (req, res) => {
+  const { restaurantName } = req.params; // Extract restaurantName from query parameters
+
+  if (!restaurantName) {
+    return res.status(400).json({ message: "Restaurant name is required." });
+  }
+
+  try {
+    // Fetch reviews that match the given restaurant name
+    const reviews = await ReviewModel.find({ restaurantName });
+
+    if (reviews.length === 0) {
+      return res
+        .status(404)
+        .json({ message: "No reviews found for this restaurant." });
+    }
+
+    res.status(200).json(reviews); // Send the fetched reviews as a response
+  } catch (error) {
+    console.error("Error fetching reviews:", error);
+    res.status(500).json({ message: "Internal server error." });
+  }
+});
+
+// api payment
+app.use("/restaurants/:restaurantId/reservepage/api/payment", paymentRoutes);
 
 // Starting the server
 app.listen(process.env.PORT, process.env.HOSTNAME, function () {

@@ -5,7 +5,7 @@ const ReserveSchema = mongoose.Schema(
     date: {
       // Changed to only use date
       type: Date,
-      required: [true, "Reservation date is required"], // Only one date field
+      required: [true, "Reservation date is required"], 
     },
     partySize: {
       type: Number,
