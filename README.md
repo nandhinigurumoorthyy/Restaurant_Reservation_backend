@@ -76,9 +76,8 @@ This backend is designed to handle authentication, reservation creation, review 
 - **Login**: Endpoint for user login, where users can authenticate using their email and password. 
 - **Signup**: Endpoint for user registration, where new users can sign up by providing their email, password, and other required details.
 
-#### **Backend - `authController.js`**:
+#### **Backend - `index.js`**:
 - Handles user signup and login requests.
-- Uses **Bcrypt** to securely hash passwords.
 - Generates **JWT tokens** for authenticated users.
 - Mongoose used to interact with MongoDB for storing and retrieving user data.
 
