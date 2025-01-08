@@ -21,7 +21,11 @@ const paymentRoutes = require("./routes/payment");
 app.use(express.json());
 app.use(
   cors({
-    origin: ["http://localhost:5173", "http://0.0.0.0:10000"],
+    origin: [
+      "http://localhost:5173",
+      "http://0.0.0.0:10000",
+      "https://restaurant-reservation-ui.netlify.app",
+    ],
     methods: ["POST", "GET", "DELETE", "PUT"],
     credentials: true,
     allowedHeaders: ["Content-Type", "Authorization"],
