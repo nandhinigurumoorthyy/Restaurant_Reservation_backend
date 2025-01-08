@@ -79,7 +79,7 @@ app.post("/login", async (req, res) => {
         .json({ status: "ERROR", message: "No record exists" });
     }
 
-    if (password !== user.password && username !== user.username) {
+    if (password !== user.password || username !== user.username) {
       return res
         .status(401)
         .json({ status: "ERROR", message: "Incorrect password or username" });
