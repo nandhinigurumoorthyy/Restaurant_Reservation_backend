@@ -13,6 +13,7 @@ const restaurantData = JSON.parse(
 );
 const reservations = require("./model/reserve.model"); // Adjust path as needed
 const { ObjectId } = require("mongodb");
+const ReviewModel = require("./model/review.model");
 const app = express();
 
 // Middleware
@@ -208,6 +209,72 @@ app.put("/api/bookings/:id", async (req, res) => {
   } catch (error) {
     console.error("Error updating booking:", error);
     res.status(500).json({ message: "Error updating booking", error });
+  }
+});
+
+// Create a review
+app.post("/restaurants/:restaurantId/review", async (req, res) => {
+  const {
+    email,
+    username,
+    restaurantId,
+    restaurantLocation,
+    restaurantName,
+    comments,
+    photosLink,
+    starRatings,
+  } = req.body;
+
+  // Validate required fields
+  if (!comments || !photosLink || !starRatings) {
+    return res.status(400).json({ message: "All fields are required." });
+  }
+
+  if (starRatings < 1 || starRatings > 5) {
+    return res
+      .status(400)
+      .json({ message: "Star ratings must be between 1 and 5." });
+  }
+
+  try {
+    // Validate user existence
+    const user = await UserModel.findOne({ email });
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    // Validate restaurant existence (assuming you have restaurant data in the database)
+    const restaurant = restaurantData.find(
+      (rst) => rst.id === parseInt(restaurantId, 10)
+    );
+    if (!restaurant) {
+      return res.status(404).json({ message: "Restaurant not found" });
+    }
+
+    // Create the review object
+    const newReview = new ReviewModel({
+      user: user._id,
+      restaurantId,
+      restaurantName,
+      restaurantLocation,
+      comments,
+      email,
+      username,
+      photosLink,
+      starRatings: parseInt(starRatings, 10),
+      createdAt: new Date(),
+    });
+
+    // Save the review to the database
+    const savedReview = await newReview.save();
+
+    return res.status(201).json({
+      message: "Review created successfully!",
+      review: savedReview,
+    });
+  } catch (error) {
+    console.error("Error creating review:", error);
+    return res.status(500).json({ message: "Internal server error.", error });
   }
 });
 
