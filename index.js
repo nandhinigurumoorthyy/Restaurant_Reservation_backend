@@ -278,6 +278,66 @@ app.post("/restaurants/:restaurantId/review", async (req, res) => {
   }
 });
 
+// Get all reviews for a specific user by email
+app.get("/api/reviews", async (req, res) => {
+  const { email } = req.query;
+
+  try {
+    const reviews = await ReviewModel.find({ email });
+    res.status(200).json(reviews);
+  } catch (error) {
+    console.error("Error fetching reviews:", error);
+    res.status(500).json({ message: "Internal server error." });
+  }
+});
+
+// Edit a review (findOneAndUpdate)
+app.put("/api/reviews/:reviewId", async (req, res) => {
+  const { reviewId } = req.params;
+  const { comments, photosLink, starRatings } = req.body;
+
+  if (starRatings < 1 || starRatings > 5) {
+    return res
+      .status(400)
+      .json({ message: "Star ratings must be between 1 and 5." });
+  }
+
+  try {
+    const updatedReview = await ReviewModel.findOneAndUpdate(
+      { _id: reviewId },
+      { comments, photosLink, starRatings },
+      { new: true } // Return the updated document
+    );
+
+    if (updatedReview) {
+      res.status(200).json(updatedReview);
+    } else {
+      res.status(404).json({ message: "Review not found." });
+    }
+  } catch (error) {
+    console.error("Error updating review:", error);
+    res.status(500).json({ message: "Internal server error." });
+  }
+});
+
+// Delete a review (findOneAndDelete)
+app.delete("/api/reviews/:reviewId", async (req, res) => {
+  const { reviewId } = req.params;
+
+  try {
+    const deletedReview = await ReviewModel.findOneAndDelete({ _id: reviewId });
+
+    if (deletedReview) {
+      res.status(200).json({ message: "Review deleted successfully." });
+    } else {
+      res.status(404).json({ message: "Review not found." });
+    }
+  } catch (error) {
+    console.error("Error deleting review:", error);
+    res.status(500).json({ message: "Internal server error." });
+  }
+});
+
 // Starting the server
 app.listen(process.env.PORT, process.env.HOSTNAME, function () {
   createDbConnection();
