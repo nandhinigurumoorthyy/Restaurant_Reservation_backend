@@ -3,7 +3,16 @@
 This backend is designed to handle authentication, reservation creation, review management, and user profile management for the restaurant reservation system. It uses **Node.js**, **Express.js**, **MongoDB**, **Mongoose**, **JWT (JSON Web Token)**, and **Razorpay** for payment integration.
 
 ---
+## Live Demo:
+👉 [**Click here to view the deployed site**](https://restaurant-reservation-ui.netlify.app/)
 
+---
+
+## Frontend GitHub Repository:
+ [**View Frontend Code**](https://github.com/nandhinigurumoorthyy/Restaurant_Reservation_frontend.git)
+
+ ---
+ 
 ## **Features**:
 
 - **User Authentication**: Provides login and signup functionalities with email and password authentication. It stores user data in MongoDB.
@@ -12,7 +21,7 @@ This backend is designed to handle authentication, reservation creation, review 
 - **Reservation Creation**: Handles restaurant reservation requests, storing them in MongoDB.
 - **Review Management**: Allows users to create, edit, and delete reviews for restaurants.
 - **Razorpay Payment Integration**: Facilitates online payments for reservations using the Razorpay payment gateway.
-
+- **Fully Responsive Design**: The application is fully responsive and works seamlessly on mobile, tablet, and desktop devices.
 ---
 
 ## **Tech Stack**:
